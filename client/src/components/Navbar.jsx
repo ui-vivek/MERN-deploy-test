@@ -18,7 +18,7 @@ const Navbar = () => {
     <div className="navbar bg-base-100">
       <div className="flex-1">
         <Link to={"/"} className="btn btn-ghost normal-case text-xl">
-          EVA
+          EVA AI
         </Link>
       </div>
       <div className="flex-none px-4">
