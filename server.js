@@ -33,7 +33,7 @@ app.use("/api/v1/openai", require("./routes/openAIroute"));
 //static files
 app.use(express.static(path.join(__dirname,'./client/build')))
 app.get('*',function(req,res){
-  res.send(path.join(__dirname,'./client/build/index.html'))
+  res.sendFile('index.html')
 })
 
 app.listen(PORT, () => {
