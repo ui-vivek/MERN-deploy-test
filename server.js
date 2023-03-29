@@ -27,8 +27,8 @@ app.use(morgan("dev"));
 app.use(errorHandler);
 
 //API Routes
-app.use("/api/v1/auth", authRoutes);
-app.use("/api/v1/openai", require("./routes/openAIroute"));
+app.use("https://voosh-5i14.onrender.com/api/v1/auth", authRoutes);
+app.use("https://voosh-5i14.onrender.com/api/v1/openai", require("./routes/openAIroute"));
 
 //static files
 // app.use(express.static(path.join(__dirname,'./client/build')))
