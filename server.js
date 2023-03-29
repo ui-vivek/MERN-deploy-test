@@ -31,10 +31,10 @@ app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/openai", require("./routes/openAIroute"));
 
 //static files
-// app.use(express.static(path.join(__dirname,'./client/build')))
-// app.get('*',function(req,res){
-//   res.send(path.join(__dirname,'./client/build/index.html'))
-// })
+app.use(express.static(path.join(__dirname,'./client/build')))
+app.get('*',function(req,res){
+  res.send(path.join(__dirname,'./client/build/index.html'))
+})
 
 app.listen(PORT, () => {
   console.log(chalk.blue.inverse("Server is running at port no :", PORT));
